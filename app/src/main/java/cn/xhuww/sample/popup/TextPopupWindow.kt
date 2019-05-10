@@ -30,6 +30,8 @@ class TextPopupWindow(activity: Activity) : PopupWindow(activity) {
         isOutsideTouchable = true
         //实现点击返回按钮关闭PopupWindow
         isFocusable = true
+        //弹出动画
+        animationStyle = R.style.PopWindow_Anim_Style
 
         //设置触摸事件拦截，在PopupWindow展示后，判断当前点击的位置是否处于展示PopupWindow的View的位置
         var downX = 0f
@@ -46,6 +48,7 @@ class TextPopupWindow(activity: Activity) : PopupWindow(activity) {
                         (downX - event.x).absoluteValue < MOVING_DISTANCE
                     ) {
                         val rect = finalActionView.getGlobalVisibleRect()
+                        //判断触摸点是否在actionView范围内
                         if (rect.contains(event.rawX.toInt(), event.rawY.toInt())) {
                             actionViewOnClickListener(finalActionView)
                         }
