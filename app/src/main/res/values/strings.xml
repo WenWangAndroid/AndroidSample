@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="popup_window_title">PopupWindow</string>
+
+    <string name="top">上</string>
+    <string name="bottom">下</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="click_tip">您点击了%s</string>
+</resources>
